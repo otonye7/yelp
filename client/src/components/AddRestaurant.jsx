@@ -4,6 +4,9 @@ const AddRestaurant = () => {
     const [name, setName] = useState("");
     const [location, setLocation] = useState("");
     const [priceRange, setPriceRange] = useState("Price Range");
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
     return (
         <div className="mb-4">
             <form action="">
@@ -24,7 +27,7 @@ const AddRestaurant = () => {
                             <option value="5">$$$$$</option>
                         </select>
                     </div>
-                    <button className="btn btn-primary">Add</button>
+                    <button onClick={handleSubmit} type="submit" className="btn btn-primary">Add</button>
                 </div>
             </form>
         </div>
